@@ -8,7 +8,7 @@ class Application
     #binding.pry
     if req.path.match(/items/)
       name=req.path.split("/items/").last
-      if i=@@items.find{|t|t.name==item}
+      if i=@@items.find{|t|t.name==name}
         return i.price
       else
         resp.status=400
