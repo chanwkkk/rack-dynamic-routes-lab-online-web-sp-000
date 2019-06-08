@@ -16,8 +16,7 @@ class Application
 
     def check_items(item)
     #  binding.pry
-      if @@items.any?{|t|t.name==item}
-        i= @@items.find{|t|t.name==item}
+      if i=@@items.find{|t|t.name==item}
         return i.price
       else
         @resp.status=400
